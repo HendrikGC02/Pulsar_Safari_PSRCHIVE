@@ -28,6 +28,18 @@ you while you work.
 
 ## Before you start
 
+To download the tutorial files, run
+
+```bash
+git clone https://github.com/HendrikGC02/Pulsar_Safari_PSRCHIVE.git
+```
+
+Or download the `.tar` file from the Google Drive and extract it via
+
+```bash
+tar -xvf PSRCHIVE_tutorial_student.tar.gz
+```
+
 Your PSRCHIVE environment should already be loaded on the machine you have
 been given — i.e. typing `vap` or `pav` at a terminal should just work. If a
 command is "not found", **ask an instructor** how to load the environment on
