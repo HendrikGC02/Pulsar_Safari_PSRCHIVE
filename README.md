@@ -309,7 +309,7 @@ we add many epochs together. `psradd` combines archives:
 ```bash
 cd J1903-7051/data                # back to the J1903 single-channel epochs
 psradd -o grand.average.ar *.ar
-pav -S grand.average.ar
+pav -ST grand.average.ar
 ```
 
 `-o` names the output. `psradd` will refuse to combine archives with
@@ -328,7 +328,7 @@ total-intensity profile, then smooth away the noise with `psrsmooth -W`
 
 ```bash
 pam -Tp grand.average.ar -e Tp        # tscrunch + pscrunch -> grand.average.Tp
-psrsmooth -W grand.average.Tp         # -> grand.average.Tp.sm
+psrsmooth -Wn grand.average.Tp         # -> grand.average.Tp.sm
 pav -D grand.average.Tp.sm
 ```
 
@@ -352,8 +352,9 @@ Now match the template to every observation. `pat` ("**p**ulse **a**rrival
 the pulse arrived:
 
 ```bash
-pat -s grand.average.Tp.sm *.ar
+pat -s grand.average.Tp.sm J*.ar
 ```
+(add the flag `-j p` to scrunch polarization of the archives you are timing to avoid warnings about different states - Total Intensity vs Stokes Paramters)
 
 Each row is one TOA. To save them in the format the timing program `tempo2`
 expects, add `-f tempo2`, and redirect to a file:
