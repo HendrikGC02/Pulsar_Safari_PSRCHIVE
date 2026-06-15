@@ -24,6 +24,8 @@ The session has three parts:
 There is a one-page **`CHEATSHEET.md`** in this folder — keep it open beside
 you while you work.
 
+You can find a handy overview of PSRCHIVE with a glossary and an interactive playground at https://hendrikgc02.github.io/PulsarTimingTutorial_PSRCHIVE/
+
 ---
 
 ## Before you start
